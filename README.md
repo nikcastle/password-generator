@@ -8,4 +8,4 @@
 [Password Generator] (https://nikcastle.github.io/password-generator/)
 
 ## Screenshot
-<img src="assets/generate-password-screenshot.png>
+<img src="assets/generate-password-screenshot.png">
