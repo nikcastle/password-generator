@@ -25,32 +25,37 @@ function writePassword() {
 function generatePassword () {
     var password = ""
     var setLength = prompt("How many characters would you like to include in the password? \n(Please enter a number between 8 and 128 characters)")
-    var confirmNumbers = confirm("Do you want to use numbers?");
-    var confirmUppercase = confirm("Do you want to use uppercase letters?");
-    var confirmLowercase = confirm("Do you want to use lowercase letters?");
-    var confirmSpecial = confirm ("Do you want to use special characters?");
-    
+    if(setLength >= 8 && setLength <= 128) {
 
-       if (confirmNumbers) {
-           userChars = [...userChars, ... numbers];
-       }
-       if (confirmUppercase) {
-           userChars = [...userChars, ...uppercaseLetters];
-           //confirmUppercase
-       }
-       if (confirmLowercase) {
-           userChars = [...userChars, ...lowercaseLetters];
-           //confirmSpecial
-       }
-       if (confirmSpecial) {
-           userChars = [...userChars, ...special];
-       }
-       for(var i = 0; i<setLength; i++) {
-           password = password + userChars[Math.floor(Math.random() * userChars.length)]
-           
-       }
-       return password;
-  
+        var confirmNumbers = confirm("Do you want to use numbers?");
+        var confirmUppercase = confirm("Do you want to use uppercase letters?");
+        var confirmLowercase = confirm("Do you want to use lowercase letters?");
+        var confirmSpecial = confirm ("Do you want to use special characters?");
+        
+    
+           if (confirmNumbers) {
+               userChars = [...userChars, ... numbers];
+           }
+           if (confirmUppercase) {
+               userChars = [...userChars, ...uppercaseLetters];
+               //confirmUppercase
+           }
+           if (confirmLowercase) {
+               userChars = [...userChars, ...lowercaseLetters];
+               //confirmSpecial
+           }
+           if (confirmSpecial) {
+               userChars = [...userChars, ...special];
+           }
+           for(var i = 0; i<setLength; i++) {
+               password = password + userChars[Math.floor(Math.random() * userChars.length)]
+               
+           }
+           return password;
+      
+    } else {
+        alert("Please enter a valid number between 8 and 128.")
+    }
    }
 
 
